@@ -1,0 +1,147 @@
+@use "sass:math";
+
+$desktop: 1600px;
+$laptop: 1440px;
+$small-laptop: 1200px;
+$tablets: 1024px;
+$small-tablets: 950px;
+$phones-and-tablets: 809px;
+$phones: 480px;
+
+$font-family: "Oswald", sans-serif;
+$font-family-secondary: "OpenSans", sans-serif;
+$base-font-size: 0.875em;
+$font-weight-s: 300;
+$font-weight-m: 400;
+$font-weight-l: 500;
+$font-weight-xl: 700;
+
+$title-font-size: 3em;
+$title-line-height: 2.44em;
+$title-letter-spacing: 0.1em;
+$title-mobile-font-size: 2.7em;
+$title-phones-font-size: 2.4em;
+
+$header-font-size: 0.875em;
+$header-letter-spacing: 0.12em;
+$header-line-height: 1.29em;
+
+$top-title-font-size: 4.5em;
+$top-title-line-height: 6.67em;
+$top-title-letter-spacing: 0.18em;
+$top-text-font-size: 1.25em;
+$top-text-line-height: 0.84em;
+$top-text-letter-spacing: 0.08em;
+$top-title-laptop-font-size: 3.25em;
+$top-title-mobile-font-size: 2.625em;
+$top-text-mobile-font-size: 0.875em;
+
+$about-us-title-font-size: 2.25em;
+$about-us-text-font-size: 0.9375em;
+$about-us-text-line-height: 1.5625em;
+
+$services-subtitle-font-size: 1.25em;
+$services-subtitle-line-height: 1.85em;
+$services-subtitle-letter-spacing: 0.08em;
+$services-text-font-size: 0.75em;
+$services-text-line-height: 1.56em;
+$services-text-letter-spacing: 0.06em;
+$services-link-font-size: 0.625em;
+$services-link-line-height: 0.92625em;
+
+$gallery-tab-text-font-size: 0.9125em;
+$gallery-tab-text-line-height: 0.951875em;
+$gallery-tab-text-letter-spacing: 0.051875em;
+
+$feedback-text-font-size: 0.875em;
+$feedback-text-line-height: 1.93em;
+$feedback-text-letter-spacing: 0.0562em;
+$feedback-subtitle-font-size: 1.125em;
+$feedback-subtitle-line-height: 1.6675em;
+$feedback-subtitle-letter-spacing: 0.071875em;
+
+$contacts-title-font-size: 1.5em;
+$contacts-title-line-height: 1.22em;
+$contacts-title-letter-spacing: 0.166em;
+$contacts-text-font-size: 0.875em;
+$contacts-text-line-height: 1.025625em;
+$contacts-text-letter-spacing: 0.0975em;
+
+$footer-font-size: 0.8125em;
+$footer-line-height: 1.204375em;
+$footer-letter-spacing: 0.051875em;
+
+$title-color: #252525;
+$subtitle-color: #504e4e;
+$text-color: #5b5858;
+$section-bg: #fbfbfb;
+$box-shadow: 0px 0px 20px 0px #dbdbdb;
+$separator-color: #d8d8d8;
+$contacts-text-color: #373737;
+$footer-bg: #2e2e2e;
+
+@function rem($px, $base-font-size: 16px) {
+  @return math.div($px, $base-font-size) + rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  font-weight: $font-weight-m;
+}
+
+.wrapper {
+  max-width: rem(2100px);
+  padding: rem(50px);
+  margin: 0 auto;
+}
+
+.container {
+  max-width: rem(1300px);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
